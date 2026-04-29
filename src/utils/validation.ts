@@ -16,7 +16,7 @@ export function validateZipCode(zip: string): { success: true; data: string } | 
   if (result.success) {
     return { success: true, data: result.data };
   } else {
-    return { success: false, error: result.error?.errors?.[0]?.message || 'Invalid zip code format' };
+    return { success: false, error: result.error?.issues?.[0]?.message || 'Invalid zip code format' };
   }
 }
 
@@ -25,6 +25,6 @@ export function validateAddress(address: string): { success: true; data: string 
   if (result.success) {
     return { success: true, data: result.data };
   } else {
-    return { success: false, error: result.error?.errors?.[0]?.message || 'Invalid address format' };
+    return { success: false, error: result.error?.issues?.[0]?.message || 'Invalid address format' };
   }
 }

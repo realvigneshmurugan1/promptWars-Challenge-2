@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { CalendarPlus } from 'lucide-react';
 import styles from './DynamicTimeline.module.css';

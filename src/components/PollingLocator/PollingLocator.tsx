@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import styles from './PollingLocator.module.css';
